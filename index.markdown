@@ -8,10 +8,10 @@ title: Prof. Pedro Volpi
 
 # Resumos disponíveis
 2. **Matemática Financeira**
-  - [Download PDF](https://example.com/geometry.pdf)
+  - [Download PDF](/assets/pdfs/mat-fin.pdf)
 
 3. **Análise Combinatória**
-  - [Download PDF](https://example.com/calculus1.pdf)
+  - [Download PDF](/assets/pdfs/combinatoria.pdf)
 
 # Em breve
 1. **Matemática Básica**
