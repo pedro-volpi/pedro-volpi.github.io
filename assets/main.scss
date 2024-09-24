@@ -81,8 +81,8 @@ h2 {
   box-shadow: var(--shadow-elevation-medium);
   transition: box-shadow 0.3s ease-in-out;
   /* Glassmorphism effect */
-  backdrop-filter: blur(11px) saturate(152%);
-  -webkit-backdrop-filter: blur(11px) saturate(152%);
+  backdrop-filter: blur(7px) saturate(117%);
+  -webkit-backdrop-filter: blur(7px) saturate(117%);
 }
 
 /* Fix the position of the content to ensure alignment */
