@@ -65,36 +65,33 @@ h2 {
 
 /* Individual card styling */
 .card {
-  background-color: #fff;
-  border: 1px solid $border-color;
-  border-radius: 4px;
+  /* Remove the first background-color, border, and border-radius */
+  /* Use the desired background properties */
+  background-color: rgba(17, 25, 40, 0.44); /* Glassmorphism background */
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 12px;
   padding: 10px;
   width: 200px;
   height: 200px; /* Ensure all cards have the same height */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures content is distributed evenly */
-  align-items: center;
-  /* Applying shadow */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
   box-shadow: var(--shadow-elevation-medium);
-  /* Adding transition for smooth shadow effect */
   transition: box-shadow 0.3s ease-in-out;
-  /* Glassmorphism */
+  /* Glassmorphism effect */
   backdrop-filter: blur(11px) saturate(152%);
   -webkit-backdrop-filter: blur(11px) saturate(152%);
-  background-color: rgba(17, 25, 40, 0.44);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* Fix the position of the content to ensure alignment */
 .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1; /* Takes up available space to push the button down */
+  align-items: center;     /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  flex: 1; /* Allows the content to fill the card */
 }
 
 /* Card headings */
@@ -116,6 +113,7 @@ h2 {
   border-radius: 4px;
   transition: background-color 0.3s;
   font-size: 14px;
+  align-self: center; /* Centers the button horizontally */
 }
 
 .card:hover {
@@ -124,11 +122,6 @@ h2 {
 
 .card a:hover {
   background-color: $brand-secondary;
-}
-
-/* Remove spacing between cards */
-.card:not(:last-child) {
-  margin-bottom: 0;
 }
 
 /* Adjust for smaller screens */
