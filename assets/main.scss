@@ -69,11 +69,11 @@ h2 {
   border-radius: 4px;
   padding: 10px;
   width: 200px;
-  height: 150px;
+  height: 200px; /* Ensure all cards have the same height */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Ensures content is distributed evenly */
   align-items: center;
   /* Applying shadow */
   box-shadow: var(--shadow-elevation-medium);
@@ -85,6 +85,15 @@ h2 {
   background-color: rgba(17, 25, 40, 0.44);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Fix the position of the content to ensure alignment */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1; /* Takes up available space to push the button down */
 }
 
 /* Card headings */
