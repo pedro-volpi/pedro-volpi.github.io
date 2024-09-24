@@ -34,7 +34,7 @@ $highlight-color:    #A6B5F5; /* Highlights */
 
 /* Adjust the body */
 body {
-  background: url('{{ "/assets/images/snow-mountain.jpeg" | relative_url }}') no-repeat center center fixed;
+  background: url('{{ "/assets/images/snow-mountain.jpg" | relative_url }}') no-repeat center center fixed;
   background-size: cover; /* Ensures the image covers the entire background */
   color: $text-color;
 }
