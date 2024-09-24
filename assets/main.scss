@@ -1,27 +1,30 @@
 ---
 ---
-/* Override variables before importing Minima */
-$brand-primary: #3498db;      /* Links, buttons */
-$brand-secondary: #2ecc71;    /* Hover states */
-$text-color: #333333;         /* Body text */
-$background-color: #f0f0f0;   /* Background color */
 
+/* Override Minima variables with your custom color palette */
+
+/* Color Variables */
+$background-color:   #ABB1CA; /* Background */
+$text-color:         #22294B; /* Main text */
+$brand-primary:      #A6B5F5; /* Links and buttons */
+$brand-secondary:    #7E84A0; /* Hover states */
+$border-color:       #495175; /* Borders and lines */
+$highlight-color:    #A6B5F5; /* Highlights */
+
+/* Import Minima theme */
 @import "minima";
 
-/* Custom styles */
+/* Custom Styles */
 
-/* Change the color of headings */
+/* Adjust body background and text colors */
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+/* Style headers */
 h1, h2, h3, h4, h5, h6 {
-  color: #e74c3c;
-}
-
-/* Style the navigation bar */
-.site-header {
-  background-color: #2c3e50;
-}
-
-.site-title {
-  color: #ecf0f1;
+  color: $text-color;
 }
 
 /* Style links */
@@ -29,16 +32,18 @@ a {
   color: $brand-primary;
 }
 
-a:hover {
+a:hover, a:focus {
   color: $brand-secondary;
 }
 
-/* Style the navigation bar background */
+/* Style the site header */
 .site-header {
-  background-color: #8e44ad;
+  background-color: $border-color;
 }
 
-/* Style the site title */
 .site-title {
-  color: #ffffff;
+  color: #FFFFFF; /* White text for contrast */
 }
+
+/* Style the site footer */
+.site-footer
