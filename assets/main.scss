@@ -1,0 +1,8 @@
+// In your assets/main.scss
+@import "minima";
+
+// Override division operations
+$spacing-unit: 24px !default;
+$half-spacing-unit: math.div($spacing-unit, 2);
+
+// Use $half-spacing-unit instead of $spacing-unit / 2
