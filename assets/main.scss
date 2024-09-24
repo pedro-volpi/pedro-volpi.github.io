@@ -1,8 +1,44 @@
-// In your assets/main.scss
+---
+---
+/* Override variables before importing Minima */
+$brand-primary: #3498db;      /* Links, buttons */
+$brand-secondary: #2ecc71;    /* Hover states */
+$text-color: #333333;         /* Body text */
+$background-color: #f0f0f0;   /* Background color */
+
 @import "minima";
 
-// Override division operations
-$spacing-unit: 24px !default;
-$half-spacing-unit: math.div($spacing-unit, 2);
+/* Custom styles */
 
-// Use $half-spacing-unit instead of $spacing-unit / 2
+/* Change the color of headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #e74c3c;
+}
+
+/* Style the navigation bar */
+.site-header {
+  background-color: #2c3e50;
+}
+
+.site-title {
+  color: #ecf0f1;
+}
+
+/* Style links */
+a {
+  color: $brand-primary;
+}
+
+a:hover {
+  color: $brand-secondary;
+}
+
+/* Style the navigation bar background */
+.site-header {
+  background-color: #8e44ad;
+}
+
+/* Style the site title */
+.site-title {
+  color: #ffffff;
+}
