@@ -24,8 +24,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   Página dedicada ao compartilhamento gratuito de resumos de Matemática para vestibulares.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pedro-volpi.github.io"
-twitter_username: ""
+twitter_username: "" # Keep this empty if you don't want to display Twitter
 github_username:  pedro-volpi
+instagram_username: prof.pedro.volpi
 
 # Build settings
 theme: minima

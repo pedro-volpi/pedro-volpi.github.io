@@ -1,6 +1,6 @@
 ---
 ---
-
+    
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Override Minima variables with your custom color palette */
@@ -40,7 +40,11 @@ body {
   /* background: url('{{ "/assets/images/escher.jpg" | relative_url }}') no-repeat center center fixed; */
   background-size: cover;
   color: $text-color;
-  font-family: 'Montserrat', sans-serif; /* Updated to Roboto for better readability */
+  font-family: 'Montserrat', sans-serif; /* Updated to Montserrat for better readability */
+}
+
+p {
+  max-width: 60ch; // Sets the max width to approximately 60 characters
 }
 
 /* Container */
@@ -79,8 +83,8 @@ section h2 {
   color: $brand-primary;
   border-bottom: 2px solid $border-color;
   padding-bottom: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 2rem; /* Increased font size for hierarchy */
   text-align: left; /* Align to the left for better reading flow */
   width: calc(100% - 200px); /* Shrinks to fit the text content */
@@ -102,16 +106,22 @@ section h2 {
   padding: 20px; /* Increased padding for better spacing */
   width: calc(33.333% - 80px); /* Three cards per row with gap accounted */
   box-sizing: border-box;
+  
+  /* Flexbox Layout */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  align-items: stretch; /* Ensure children take full width */
+  justify-content: flex-start; /* Start from the top */
+  
   box-shadow: var(--shadow-elevation-low);
   transition: box-shadow 0.3s ease-in-out;
+  
   /* Glassmorphism effect */
   backdrop-filter: blur(5px) saturate(120%);
   -webkit-backdrop-filter: blur(5px) saturate(120%);
   background-color: rgba(165, 169, 180, 0.25); /* Slightly opaque for better contrast */
+  
+  height: 300px; /* Set a fixed height to ensure all cards are the same size */
 }
 
 /* Specific styling for coming soon cards */
@@ -129,8 +139,10 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;     /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to the top */
   flex: 1; /* Allows the content to fill the card */
+  
+  height: 100%; /* Ensure it takes full height of the card */
 }
 
 /* Card headings */
@@ -139,6 +151,21 @@ section h2 {
   color: $text-color;
   font-size: 1.5rem; /* Increased font size for hierarchy */
   text-align: center;
+  
+  /* Align h3 to the top */
+  align-self: center; /* Center horizontally */
+  /* Remove or adjust text-align if needed */
+}
+
+/* Center the paragraph content vertically */
+.card-content p {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally if desired */
+  text-align: center; /* Optional: Center text */
+  gap: 10px; /* Space between multiple <p> elements */
 }
 
 /* Download link styling */
@@ -227,4 +254,25 @@ section h2 {
   
   /* Ensure the SVG doesn't interfere with other elements */
   pointer-events: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px; /* Adjust space as needed */
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: $text-color; /* Use your defined text color */
+  transition: transform 0.2s, color 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    color: $brand-secondary; /* Change color on hover */
+  }
+}
+
+.social-links i {
+  /* Ensure icons are appropriately sized */
+  font-size: 24px;
 }
